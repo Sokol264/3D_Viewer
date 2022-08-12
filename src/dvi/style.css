@@ -1,0 +1,19 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+    font-weight: 400;
+  
+    background-color: white;
+    margin: 0;
+  }
+
+.container {
+    width: 100%;
+    max-width: 650px;
+  
+    margin: 0 auto;
+}
+
+.folder {
+    color: red;
+}

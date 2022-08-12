@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <object class="GtkAdjustment" id="edge_spin_adj">
+        <property name="value">1</property>
+        <property name="lower">1</property>
+        <property name="upper">10</property>
+        <property name="step-increment">1</property>
+    </object>
+    <object class="GtkAdjustment" id="vertex_spin_adj">
+        <property name="value">1</property>
+        <property name="lower">1</property>
+        <property name="upper">3</property>
+        <property name="step-increment">1</property>
+    </object>
+  <object class="GtkDialog" id="settings_window">
+      <property name="title">Settings</property>
+      <property name="resizable">False</property>
+    <child internal-child="content_area">
+      <object class="GtkBox" id="vbox1">
+            <property name="visible">True</property>
+            <property name="margin_top">10</property>
+            <property name="margin_bottom">10</property>
+            <property name="margin_start">10</property>
+            <property name="margin_end">10</property>
+            <property name="orientation">vertical</property>
+            <property name="homogeneous">True</property>
+            <property name="spacing">10</property>
+        <child>
+            <object class="GtkBox" id="hbox1">
+                <property name="visible">True</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="margin_start">10</property>
+                <property name="margin_end">10</property>
+                <property name="orientation">horizontal</property>
+                <property name="homogeneous">True</property>
+                <property name="spacing">10</property>
+                <property name="hexpand">True</property>
+                <child>
+                    <object class="GtkLabel" id="projection_type_label">
+                    <property name="xalign">1</property>
+                        <property name="halign">start</property>
+                        <property name="valign">center</property>
+                        <property name="hexpand">1</property>
+                        <property name="label">Projection type</property>
+                    </object>
+                </child>
+                 <child>
+                    <object class="GtkDropDown" id="projection_type">
+                        <property name="model">
+                            <object class="GtkStringList">
+                            <items>
+                                <item>Parallel</item>
+                                <item>Central</item>
+                            </items>
+                            </object>
+                        </property>
+                    </object>
+                </child>
+            </object>
+        </child>
+         <child>
+            <object class="GtkBox" id="hbox2">
+                <property name="visible">True</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="margin_start">10</property>
+                <property name="margin_end">10</property>
+                <property name="orientation">horizontal</property>
+                <property name="homogeneous">True</property>
+                <property name="spacing">10</property>
+                <property name="hexpand">True</property>
+                <child>
+                    <object class="GtkLabel" id="background_color_label">
+                    <property name="xalign">1</property>
+                        <property name="halign">start</property>
+                        <property name="valign">center</property>
+                        <property name="hexpand">1</property>
+                        <property name="label">Background color</property>
+                    </object>
+                </child>
+                 <child>
+                    <object class="GtkColorButton" id="background_color_btn"/>
+                </child>
+            </object>
+        </child>
+         <child>
+            <object class="GtkBox" id="hbox3">
+                <property name="visible">True</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="margin_start">10</property>
+                <property name="margin_end">10</property>
+                <property name="orientation">horizontal</property>
+                <property name="homogeneous">True</property>
+                <property name="spacing">10</property>
+                <property name="hexpand">True</property>
+                <child>
+                    <object class="GtkLabel" id="line_type_label">
+                        <property name="xalign">1</property>
+                        <property name="halign">start</property>
+                        <property name="valign">center</property>
+                        <property name="hexpand">1</property>
+                        <property name="label">Line type</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkDropDown" id="line_type">
+                        <property name="model">
+                            <object class="GtkStringList">
+                            <items>
+                                <item>Solid</item>
+                                <item>Dotted</item>
+                            </items>
+                            </object>
+                        </property>
+                    </object>
+                </child>
+            </object>
+        </child>
+        <child>
+            <object class="GtkBox" id="hbox4">
+                <property name="visible">True</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="margin_start">10</property>
+                <property name="margin_end">10</property>
+                <property name="orientation">horizontal</property>
+                <property name="homogeneous">True</property>
+                <property name="spacing">10</property>
+                <property name="hexpand">True</property>
+                <child>
+                    <object class="GtkLabel" id="edge_color_label">
+                        <property name="xalign">1</property>
+                        <property name="halign">start</property>
+                        <property name="valign">center</property>
+                        <property name="hexpand">1</property>
+                        <property name="label">Edge color</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkColorButton" id="edge_color_btn"/>
+                </child>
+            </object>
+        </child>
+        <child>
+            <object class="GtkBox" id="hbox5">
+                <property name="visible">True</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="margin_start">10</property>
+                <property name="margin_end">10</property>
+                <property name="orientation">horizontal</property>
+                <property name="homogeneous">True</property>
+                <property name="spacing">10</property>
+                <property name="hexpand">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                    <object class="GtkLabel" id="edge_thickness_label">
+                        <property name="xalign">1</property>
+                        <property name="halign">start</property>
+                        <property name="valign">center</property>
+                        <property name="hexpand">1</property>
+                        <property name="label">Edge thickness</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkSpinButton" id="edge_thickness_spin">
+                        <property name="adjustment">edge_spin_adj</property>
+                    </object>
+                </child>
+            </object>
+        </child>
+        <child>
+            <object class="GtkBox" id="hbox6">
+                <property name="visible">True</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="margin_start">10</property>
+                <property name="margin_end">10</property>
+                <property name="orientation">horizontal</property>
+                <property name="homogeneous">True</property>
+                <property name="spacing">10</property>
+                <property name="hexpand">True</property>
+                <child>
+                    <object class="GtkLabel" id="dot_type_label">
+                        <property name="xalign">1</property>
+                        <property name="halign">start</property>
+                        <property name="valign">center</property>
+                        <property name="hexpand">1</property>
+                        <property name="label">Dot type</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkDropDown" id="dot_type">
+                        <property name="model">
+                            <object class="GtkStringList">
+                            <items>
+                                <item>None</item>
+                                <item>Square</item>
+                                <item>Circle</item>
+                            </items>
+                            </object>
+                        </property>
+                    </object>
+                </child>
+            </object>
+        </child>
+        <child>
+            <object class="GtkBox" id="hbox7">
+                <property name="visible">True</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="margin_start">10</property>
+                <property name="margin_end">10</property>
+                <property name="orientation">horizontal</property>
+                <property name="homogeneous">True</property>
+                <property name="spacing">10</property>
+                <property name="hexpand">True</property>
+                <child>
+                    <object class="GtkLabel" id="vertex_color_label">
+                        <property name="xalign">1</property>
+                        <property name="halign">start</property>
+                        <property name="valign">center</property>
+                        <property name="hexpand">1</property>
+                        <property name="label">Vertex color</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkColorButton" id="vertex_color_btn"/>
+                </child>
+            </object>
+        </child>
+        <child>
+            <object class="GtkBox" id="hbox8">
+                <property name="visible">True</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="margin_start">10</property>
+                <property name="margin_end">10</property>
+                <property name="orientation">horizontal</property>
+                <property name="homogeneous">True</property>
+                <property name="spacing">10</property>
+                <property name="hexpand">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                    <object class="GtkLabel" id="vertex_size_label">
+                        <property name="xalign">1</property>
+                        <property name="halign">start</property>
+                        <property name="valign">center</property>
+                        <property name="hexpand">1</property>
+                        <property name="label">Vertex size</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkSpinButton" id="vertex_size_spin">
+                        <property name="adjustment">vertex_spin_adj</property>
+                    </object>
+                </child>
+            </object>
+        </child>
+        <child internal-child="action_area">
+          <object class="GtkBox" id="hbuttonbox1">
+                <property name="margin_start">50</property>
+                <property name="margin_end">50</property>
+                <property name="margin_bottom">10</property>
+                <property name="hexpand">True</property>
+                <property name="visible">True</property>
+                <property name="orientation">horizontal</property>
+                <property name="homogeneous">True</property>
+                <property name="spacing">100</property>
+                <property name="can_focus">False</property>
+            <child>
+              <object class="GtkButton" id="ok_button">
+                <property name="label" translatable="yes">_Ok</property>
+                <property name="use-underline">True</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="cancel_button">
+                <property name="label" translatable="yes">_Cancel</property>
+                <property name="use-underline">True</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+        <action-widget response="cancel">cancel_button</action-widget>
+        <action-widget response="ok" default="true">ok_button</action-widget>
+    </action-widgets>
+  </object>
+</interface>

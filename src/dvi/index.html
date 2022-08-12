@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>3DViewer v1.0</title>
+</head>
+<body>
+    <div class="container">
+        <h1>s21_3DViewer_v1.0</h1>
+        <h2>by caquaman, sperses and mtickler</h2>
+        <div class="info_block">
+            <h2>Information</h2>
+            <p>
+                Implementation of project 3DViewer_v1.0 using C language and GTK+ library.
+                This is a program to view 3D wireframe models.
+                The models themselves load from .obj files and viewable on the screen with the ability to rotate, move and scale.
+                The program allows you to set custom settings regarding the display of the 3D model. 
+                In addition, the recording of the received image into files of bmp and jpeg formats is implemented.
+                The program also allows you to record small screencasts in a .gif file
+            </p>
+            <h2>Usage</h2>
+            <h3>Run program without installation</h3>
+            <p>
+                To run program without install just type <pre><code>make run</code></pre>
+            </p>
+            <h3>Rotate and move object</h3>
+            <p>
+                To rotate or move object just type x,y,z values and click the button <b>Rotate</b> or <b>Move</b> 
+            </p>
+            <h3>Scale object</h3>
+            <p>
+                To scale object just type scale value and click the button <b>Scale</b>.
+                The program does not accept negative values. To constriction object , for example by 5, just type 0.5
+            </p>
+            <h3>Record object</h3>
+            <p>
+                To record small screencast in a .gif file click the button <b>Record</b>, then click the button <b>Save gif</b>
+                Then move, rotate, scale, or do what you want to record screencast. 
+                To finish recording click the button <b>Record</b> again and then click the button <b>Stop</b>
+            </p>
+
+            <h2>Installation</h2>
+            <h3>Install:</h3>
+            <p>
+                To install the program type <pre><code>make install</code></pre>
+                Then go to folder where application was installed <br>
+                (Usually this is <b class="folder">/Users/Username/Desktop/3DViewer/</b>)<br>
+                <br>
+                Then type <pre><code>./viewer</code></pre>
+            </p>
+            <h2>Uninstallation</h2>
+            <h3>Uninstall</h3>
+            <p>
+                To uninstall program type <pre><code>make uninstall</code></pre>.
+            </p>
+        </div>
+            
+    </div>
+</body>
+</html>

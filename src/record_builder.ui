@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object id="record_window" class="GtkWindow">
+    <property name="title">Record</property>
+    <property name="default_width">200</property>
+    <property name="default_height">100</property>
+    <property name="resizable">False</property>
+    <property name="can_focus">True</property>
+    <child>
+      <object id="header_hbox" class="GtkBox">
+          <property name="visible">True</property>
+          <property name="orientation">horizontal</property>
+          <property name="spacing">12</property>
+          <property name="margin_top">40</property>
+          <property name="margin_bottom">40</property>
+          <property name="margin_start">10</property>
+          <property name="margin_end">10</property>
+          <child>
+              <object id="save_jpeg_btn" class="GtkButton">
+                  <property name="label">Save jpeg</property>
+              </object>
+          </child>
+          <child>
+              <object id="save_bmp_btn" class="GtkButton">
+                  <property name="label">Save bmp</property>
+              </object>
+          </child>
+          <child>
+              <object id="save_gif_btn" class="GtkButton">
+                  <property name="label">Save gif</property>
+              </object>
+          </child>
+        </object>
+      </child>
+  </object>
+</interface>
